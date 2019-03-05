@@ -1,0 +1,60 @@
+﻿@model IEnumerable<sampleapp.Todo.Models.DTO.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create new", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RowKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartitionKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Timestamp)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelitem => item.RowKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.PartitionKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.EmployeeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.EmployeeDetails)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.EmployeeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.EmployeeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.Timestamp)
+        </td>
+    </tr>
+    }
+</table>
